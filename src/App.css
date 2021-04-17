@@ -1,38 +1,235 @@
-.App {
-  text-align: center;
+body {
+  /* background: rgba(92,174,224, .5); */
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.flex-center {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.app-header {
+  width: 100%;
+  font-size: 50px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.icon-wrapper {
+  position: absolute;
+  right: 50px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.icon-holder {
+  padding-top: 10px;
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+}
+@media only screen and (max-width: 800px) {
+  .app-header {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+  .icon-wrapper {
+    position: relative;
+    right: unset;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
+}
+.header-icon {
+}
+.header-icon-text {
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+.main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.header-text {
+  font-family: 'Dancing Script', cursive;
+  /* border-bottom: 1px solid black;; */
+  width: fit-content;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.app-slogan {
+  font-size: 20px; 
+  height: 30vh;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.473);
+}
+
+.slogan {
+  /* height: 50vh; */
+}
+
+.center-holder {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-layout {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.main-img-text-holder {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+.main-img-text-holder > div { 
+  height: 100%;
+  width: 100%;
+  background: grey;
+  opacity: 0.2;
+}
+.main-img {
+  height: 70vh;
+  object-position: center;
+  object-fit: cover;
+}
+.main-img-text {
+  background-color: white;
+  color: black;
+  font-size: 55px;
+  font-weight: bold;
+  margin: 0 auto;
+  padding: 10px 20px;
+  width: fit-content;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  transform: translate(-55%, -50%);
+  mix-blend-mode: screen;
+  white-space: nowrap;
+}
+.main-img-text-bottom {
+  top: 60%;
+  left: 55%;
+}
+@media only screen and (max-width: 600px) {
+  .main-img-text {
+    font-size: 20px;
+  }
+  .main-img-text-bottom {
+    top: 56%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .main-img-text {
+    font-size: 30px;
+  }
+  .main-img-text-bottom {
+    top: 58%;
+  }
+}
+.section-title {
+  text-align: center;
+  padding: 40px 20px 20px;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, .7);
+}
+
+.card-layout {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  width: 1080px;
+}
+.card {
+  width: 500px;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 20px;
+  position: relative;
+  margin: 20px 20px;
+}
+.card-img {
+  object-fit: contain;
+  width: 100%;
+}
+.card-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  font-weight: bold;
+  color: black;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 10px 30px;
+  white-space: nowrap;
+  border-radius: 20px;
+}
+@media only screen and (max-width: 1062px) {
+  .card-layout {
+    width: 100%;
+  }
+  .card { 
+    height: 100%;
+    margin: 10px 0px;
+    border-radius: 0px;
+  }
+  .card-img {
+    object-fit: fill;
+    object-position: center;
+    height: 100%;
+  }
+  .card:last-child .card-text {
+    white-space: pre-wrap;
+  }
+}
+
+/* photo & video */
+.layout-item {
+  position: relative;
+}
+.layout-item img {
+  width: 100%;
+}
+.layout-filter {
+  position: absolute;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background: white;
+  opacity: .5;
+  width: 50%;
+  display: block;
+}
+.layout-filter-holder {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.layout-item-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 30px;
+  font-weight: bold;
 }
