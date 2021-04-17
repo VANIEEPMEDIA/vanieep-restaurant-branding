@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/vanieep-restaurant-branding/static/css/main.9d5b29c0.chunk.css",
+    "main.js": "/vanieep-restaurant-branding/static/js/main.d5a2fb64.chunk.js",
+    "main.js.map": "/vanieep-restaurant-branding/static/js/main.d5a2fb64.chunk.js.map",
+    "runtime-main.js": "/vanieep-restaurant-branding/static/js/runtime-main.4ed2cdf1.js",
+    "runtime-main.js.map": "/vanieep-restaurant-branding/static/js/runtime-main.4ed2cdf1.js.map",
+    "static/js/2.d82d5124.chunk.js": "/vanieep-restaurant-branding/static/js/2.d82d5124.chunk.js",
+    "static/js/2.d82d5124.chunk.js.map": "/vanieep-restaurant-branding/static/js/2.d82d5124.chunk.js.map",
+    "static/js/3.2b408e8c.chunk.js": "/vanieep-restaurant-branding/static/js/3.2b408e8c.chunk.js",
+    "static/js/3.2b408e8c.chunk.js.map": "/vanieep-restaurant-branding/static/js/3.2b408e8c.chunk.js.map",
+    "index.html": "/vanieep-restaurant-branding/index.html",
+    "static/css/main.9d5b29c0.chunk.css.map": "/vanieep-restaurant-branding/static/css/main.9d5b29c0.chunk.css.map",
+    "static/js/2.d82d5124.chunk.js.LICENSE.txt": "/vanieep-restaurant-branding/static/js/2.d82d5124.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/vanieep-restaurant-branding/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4ed2cdf1.js",
+    "static/js/2.d82d5124.chunk.js",
+    "static/css/main.9d5b29c0.chunk.css",
+    "static/js/main.d5a2fb64.chunk.js"
+  ]
+}
