@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import mainImg from './img/restaurant-and-caf4.jpg'
 import photoVideo from './img/photo-and-video.jpg'
@@ -17,7 +16,7 @@ function App() {
         </div>
         <div className="icon-wrapper">
           <div className="icon-holder">
-            <AiOutlinePhone className="header-icon"></AiOutlinePhone>
+            <AiOutlinePhone className="header-icon header-icon-phone"></AiOutlinePhone>
             <div className="header-icon-text">415-519-5133</div>
           </div>
           <div className="icon-holder">
@@ -27,7 +26,7 @@ function App() {
         </div>
       </header>
       <section className="center-holder slogan">
-        <img className="main-img" src={mainImg}></img>
+        <img alt="" className="main-img" src={mainImg}></img>
         <div className="main-img-text-holder">
           <div className="flex-center">
           </div>
@@ -38,25 +37,25 @@ function App() {
       <section className="section-title">Our Services</section>
       <div className="card-layout">
         <div className="card">
-          <img className="card-img" src={photoVideo}></img>
+          <img alt="" className="card-img" src={photoVideo}></img>
           <div className="card-text">Photo & Video</div>
         </div>
         <div className="card">
-          <img className="card-img" src={designImg}></img>
+          <img alt="" className="card-img" src={designImg}></img>
           <div className="card-text">Gragphic Design</div>
         </div>
         <div className="card">
-          <img className="card-img" src={webDesign}></img>
+          <img alt="" className="card-img" src={webDesign}></img>
           <div className="card-text">Web Design</div>
         </div>
         <div className="card">
-          <img className="card-img" src={socialMedia}></img>
+          <img alt="" className="card-img" src={socialMedia}></img>
           <div className="card-text">Social Media Marketing</div>
         </div>
       </div> 
       <div className="text-content-layout">
         <div className="layout-item">
-          <img src={photoVideoMain}></img>
+          <img alt="" src={photoVideoMain}></img>
           <div className="layout-filter">
             <div className="layout-filter-holder">
               <div className="layout-item-text">Photo & Video</div>
