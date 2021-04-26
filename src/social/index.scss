@@ -1,0 +1,55 @@
+.socialRoot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  .socialRoot-innerWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  
+    &:hover {
+      color: var(--primary-text);
+    }
+    & > div {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      .socialRoot-svg {
+        height: 50px;
+        width: 50px;
+        svg {
+          width: 100%; 
+          height: auto;
+          fill: var(--secondary-text);
+          &.ins {
+            fill: pink;
+          }
+          &.weixin {
+            fill: green; 
+          }
+          &.redbook {
+            fill: red !important;
+          }
+        }
+      }
+      &:hover {
+        svg {
+          fill: var(--primary-text);
+        }
+      }
+      .socialRoot-id {
+        padding-left: 20px;
+        color: var(--secondary-text) !important;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 800px) {
+  .socialRoot .socialRoot-innerWrapper{
+    flex-direction: column;
+    height: 200px;
+  }
+}
