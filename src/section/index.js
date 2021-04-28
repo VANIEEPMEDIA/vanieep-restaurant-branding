@@ -2,9 +2,10 @@ import React, { useEffect } from "react";
 import "./index.scss";
 
 const Section = ({ content }) => {
-  const { title1, title2, text, img, backgroundColor } = content;
+  const { title1, title2, text, img, video, backgroundColor } = content;
   const myRef = React.createRef();
 
+  const Comp = video
   const handleScroll = () => {
     const oneEle = myRef.current
     if (oneEle && oneEle.classList.contains("one-animation")) {
@@ -18,11 +19,12 @@ const Section = ({ content }) => {
     }
   }
   useEffect(() => {
+    handleScroll()
     window.addEventListener("scroll", handleScroll)
     return () => {
       window.removeEventListener("scroll", handleScroll)
     }
-  }, [])
+  }, [content])
   return (
     <div className="section" style={{ backgroundColor }}>
       <div className="section one" ref={myRef}>
@@ -31,7 +33,8 @@ const Section = ({ content }) => {
           <p className="section-one-text">{text}</p>
         </div>
       </div>
-      <img className="section img" src={img} loading="lazy"></img>
+      {/* {video ? <video className="section video" src="video" /> :<img className="section img" src={img} loading="lazy"></img>} */}
+      {video ? <Comp className="section video"/> :<img className="section img" src={img} loading="lazy"></img>}
     </div>
   );
 };

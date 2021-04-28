@@ -1,8 +1,11 @@
 .body-section {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    width: 80%;
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     white-space: pre-wrap;
+    margin: auto;
 }
 
 .body-section.one {

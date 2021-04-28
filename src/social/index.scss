@@ -1,22 +1,21 @@
 .socialRoot {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
   padding: 40px;
   .socialRoot-innerWrapper {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-end;
     width: 100%;
   
     &:hover {
       color: var(--primary-text);
     }
-    & > div {
+    .icon-holder {
       display: flex;
       flex-direction: row;
       align-items: center;
-      justify-content: flex-start;
       .socialRoot-svg {
         height: 50px;
         width: 50px;
@@ -25,16 +24,21 @@
           height: auto;
           fill: var(--secondary-text);
           &.ins {
-            fill: pink;
+            // fill: pink;
           }
           &.weixin {
-            fill: green; 
+            // fill: green; 
           }
           &.redbook {
-            fill: red !important;
+            // fill: red !important;
           }
         }
       }
+      .socialRoot-id {
+        width: 250px;
+      }
+      text-decoration: none;
+      color: var(--secondary-text);
       &:hover {
         svg {
           fill: var(--primary-text);
@@ -49,7 +53,5 @@
 }
 @media only screen and (max-width: 800px) {
   .socialRoot .socialRoot-innerWrapper{
-    flex-direction: column;
-    height: 200px;
   }
 }

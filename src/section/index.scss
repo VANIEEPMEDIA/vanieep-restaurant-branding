@@ -3,16 +3,17 @@
     flex-direction: row;
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     white-space: pre-wrap;
+    height: 60vh;
 }
 
 .section.one {
-    width: 40%;
+    width: 20%;
+    // height: 663px;
     display: flex;
     flex-direction: column;
-    height: 663px;
+    margin: auto;
     align-items: center;
     justify-content: center;
-    padding: 4em 0 5em 0;
     opacity: 0;
     transform: translateX(-10%);
     transition: all .5s ease-in-out;
@@ -23,7 +24,7 @@
 
 }
 .section.one .inner-wrap {
-    padding: 18% 21% 40px 18%;
+    // width: 90%;
 }
 .section-one-title {
     font-family: 'Chronicle Display A', 'Chronicle Display B';
@@ -31,7 +32,7 @@
     font-style: normal;
     font-size: 47px;
     line-height: 52px;
-    margin-top: 20px;
+    // margin-top: 20px;
     color: var(--secondary-text);
     margin-bottom: 23px;
 }
@@ -47,18 +48,57 @@
     width: 60%;
     object-fit: cover;
 }
+.section.video {
+}
+@media only screen and (min-width: 800px) and (max-width: 1300px) {
+    .section {
+        height: fit-content;
+        clear: both;
+        flex-direction: column;
+        align-items: center;
+        &:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .section.one {
+            width: 80%;
+            &:after {
+                content: "";
+                display: block;
+                clear: both;
+            }
+            .inner-wrap {
+                padding-top: 20%;
+                padding-bottom: 20%;
+            }
+        }
+        .section.img {
+            width: 100%;
+        }
+    }
+
+}
 @media only screen and (max-width: 800px) {
     .section {
         flex-direction: column;
+        height: unset;
     }
     .section.one {
         width: 100%;
+        padding: 4em 0 5em 0 !important;
+        margin: unset !important;
+        height: 663px;
     }
-    .section.img {
+    .section.img, .section.video {
         width: 100%;
     }
+    .section.video {
+        height: 50vh;
+    }
     .section.one .inner-wrap {
-        padding: 5% 10%;
+        padding: 5% 10% !important;
+        width: 80%;
     }
     .section-one-title, .section-one-text {
         text-align: center;

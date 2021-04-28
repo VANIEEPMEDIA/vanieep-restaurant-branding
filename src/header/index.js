@@ -22,7 +22,7 @@ const Header = ({ translationClick, isChinese }) => {
         />
       </div>
       <div className="header-text">Vanieep Media</div>
-      <div className="icon-wrapper">
+      {/* <div className="icon-wrapper">
         <a href="tel:+14155195133" className="icon-holder">
           <AiOutlinePhone className="header-icon header-icon-phone"></AiOutlinePhone>
           <span className="header-icon-text">415-519-5133</span>
@@ -31,7 +31,7 @@ const Header = ({ translationClick, isChinese }) => {
           <AiOutlineMail className="header-icon"></AiOutlineMail>
           <span className="header-icon-text">vanieepmedia@gmail.com</span>
         </a>
-      </div>
+      </div> */}
     </header>
   );
 };

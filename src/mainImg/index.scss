@@ -35,6 +35,7 @@
       max-width: 50%;
       color: white;
       background-color: rgba(128, 128, 128, 0.089);
+      word-break: keep-all;
     }
     h4 {
       font-family: "Chronicle Display A", "Chronicle Display B";
@@ -62,6 +63,12 @@
   .mainImg-textWrapper {
     justify-content: center;
     align-items: center;
+    padding-right: 220px;
+
+    h1 {
+      font-size: 4vw;
+      line-height: 4.5vw;
+    }
   }
 }
 @media only screen and (max-width: 500px) {
