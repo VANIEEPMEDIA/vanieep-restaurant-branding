@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import "./index.scss";
 
 const Section = ({ content }) => {
-  const { title1, title2, text, img, video, backgroundColor } = content;
+  const { title1, title2, title3, text, img, video, backgroundColor } = content;
   const myRef = React.createRef();
 
   const Comp = video
@@ -29,7 +29,7 @@ const Section = ({ content }) => {
     <div className="section" style={{ backgroundColor }}>
       <div className="section one" ref={myRef}>
         <div className="inner-wrap">
-          <h2 className="section-one-title">{title1}<br/>{title2}</h2>
+          <h2 className="section-one-title">{title1}<br/>{title2}<br/>{title3}</h2>
           <p className="section-one-text">{text}</p>
         </div>
       </div>
