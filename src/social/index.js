@@ -25,11 +25,11 @@ const Social = () => {
           </div>
           <div className="socialRoot-id">milkteahunter</div>
         </div> */}
-        <a className="icon-holder" href="mailto:vanieepmedia@gmail.com">
+        <a className="icon-holder" href="mailto:jiana@vanieepmedia.com">
           <div className="socialRoot-svg">
             <AiOutlineMail className="header-icon"></AiOutlineMail>
           </div>
-          <span className="socialRoot-id">vanieepmedia@gmail.com</span>
+          <span className="socialRoot-id">jiana@vanieepmedia.com</span>
         </a>
       </div>
     </div>
