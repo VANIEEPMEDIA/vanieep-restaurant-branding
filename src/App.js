@@ -118,7 +118,7 @@ function App() {
     <div className="app">
       <Header translationClick={handleChange} isChinese={isChinese}/> 
       <MainImg isChinese={isChinese}/>
-      <Body/>
+      <Body isChinese={isChinese} />
       {
         _c.map((c, i) => <Section key={i} content={c} />)
       }
