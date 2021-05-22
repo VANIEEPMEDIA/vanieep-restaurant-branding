@@ -35,7 +35,7 @@ let content = [
   {
     title1: "Photo",
     // title2: "& Video",
-    text: `We offer professional, creative photo shoots to perfectly fit your restaurant’s needs which will bring attraction to your website, social media, marketing, and advertising. `,
+    text: `We specialize in food photography and lighting because we know that customers make their dining decisions based on exceptional and enticing photos. Our customized photo shoots will create the best photos for your restaurant and attract customers to your website and all social media channels.`,
     price: "Pricing starts at $2800",
     estimate: "Contact us for a free estimate",
     img: strawberrywater,
@@ -44,7 +44,7 @@ let content = [
   {
     title1: "Video",
     // title2: "& Printing",
-    text: `Video can be a powerful way to share your story, bring in customers and get the attention of media outlets. We recommend you to book video shoots as needed or schedule mini shoots to feed the social media beast and grow your following.`,
+    text: `Video can be a powerful way to share your story, bring in customers and get the attention of media outlets. We recommend that you book video shoots as soon as needed or schedule mini shoots so that you may feed the social media beast and grow your following.`,
     img: video,
     price: "Pricing starts at $5000",
     estimate: "Contact us for a free estimate",
@@ -56,7 +56,7 @@ let content = [
     title1: "Logo and Naming",
     // title2: "& Development",
     text:
-      "Creating a logo for your restaurant is the best way to start building a unique brand identity. Naming your restaurant properly also sparks curiosity for knowing more, learning, and engaging with the brand。 We offer to design your restaurant logo, and create the name of your new restaurant, and menu items to help you identify your restaurant brand.",
+      "Creating a logo for your restaurant is the best way to start building a unique brand identity. Naming your restaurant properly also sparks curiosity for knowing more, learning, and engaging with the brand. We can design your restaurant logo, create the name of your new restaurant as well as invent creative menu items that will strengthen your unique restaurant brand.",
     img: logo,
     price: "Pricing starts at $2000",
     estimate: "Contact us for a free estimate",
@@ -66,7 +66,7 @@ let content = [
     title1: "Menu, Poster Design",
     title2: "& Printing",
     text:
-      "A good restaurant menu design is a key component to any restaurant. Posters are effective in promoting your business. Don’t miss out on this opportunity to advertise your restaurant business as they can help increase your visibility, recognition, and send out an efficient call to action. We are honor to offer the menu design, poster design and high quality printing services. ",
+      "A good restaurant menu design is a key component to any restaurant. Posters are effective in promoting your business and will increase your visibility, brand recognition and send out a compelling call to action to your customers.  We are honored to offer menu and poster design services with high quality printing.",
     img: menu,
     price: "Pricing starts at $1200",
     estimate: "Contact us for a free estimate",
@@ -76,7 +76,7 @@ let content = [
     title1: "Website Design",
     title2: "& Development",
     text:
-      "Websites are a key marketing tool significant to getting potential customers to learn more about your restaurant, and existing customers to connect with your restaurant. With our custom website maintenance packages, we work with you to keep your website up to date.",
+      "Websites are a key marketing tool that is significant to getting potential customers to learn about your restaurant.  It is also important for existing customers to stay connected through regular updates about the menu or ongoing promotions.  With our custom website maintenance packages, we will work with you to keep your website up to date.",
     price: "Pricing starts at $5600",
     estimate: "Contact us for a free estimate",
     img: website,
@@ -86,7 +86,7 @@ let content = [
     title1: "Social Media",
     title2: "& Marketing",
     text:
-      "Social media is a clear and consistent digital marketing tool to successfully promote your restaurant. Our digital marketing capabilities include social media management and content creation, social media ads, and paid searching management.",
+      "Social media is a clear and consistent digital marketing tool to successfully promote your restaurant. Our digital marketing capabilities include social media management, content creation, social media ads and paid search management. ",
     price: "Pricing starts at $3500",
     estimate: "Contact us for a free estimate",
     img: socialMedia,
@@ -98,7 +98,7 @@ const contentCN = [
   {
     title1: "产品摄影",
     // title2: "& 视频",
-    text: `我们会拍摄最专业的，富有创意的产品图片去满足您餐厅品牌宣传及使用的所有需求。这些图片将会为您的品牌网站，社交媒体，营销以及广告宣传带来更多的品牌魅力。`,
+    text: `我们会为您的餐厅拍摄最专业的，富有创意和美感的菜品图片，因为我们知道很多时候您的客人下单的关键取决于菜品图片的质量和诱人程度。 我们会为您客制化菜品拍摄，从而满足您餐厅品牌宣传及使用的所有需求。这些图片将会为您的品牌网站，社交媒体，营销以及广告宣传带来更多的品牌魅力。`,
     price: "价格$2800起",
     estimate: "请联系我们做一个免费的估价",
     img: strawberrywater,
@@ -138,7 +138,7 @@ const contentCN = [
     title1: "网站设计",
     title2: "和开发",
     text:
-      "餐厅网站在吸引潜在顾客和维系老顾客方面是一个非常重要的营销工具。如果您搭配上我们的网站管理服务，我们会及时，持续地更新您的网站。",
+      "餐厅网站在吸引更多潜在顾客和维系老顾客，让他们及时知道您的餐厅出的新品或新的优惠活动方面是一个非常重要的营销工具。如果您搭配上我们的网站管理服务，我们会及时，持续地更新您的网站。",
     price: "价格$5600起",
     estimate: "请联系我们做一个免费的估价",
     img: website,
@@ -195,20 +195,19 @@ function App() {
               {/* </div> */}
               {/* <img src={projectImg} style={{width: "100%"}}></img> */}
               <div className="p">
-                <p className="big hello">Hellooo</p>
+               
                 <br></br>
                 {!isChinese ? (
-                  <p className="big">our valued clients,</p>
+                  <p className="big">To Our Valued Clients:</p>
                 ) : (
-                  <p className="big">尊贵的客户，</p>
+                  <p className="big">致我们最尊贵的客户，</p>
                 )}
 
                 <br></br>
 
                 {!isChinese ? (
                   <p>
-                    We are honor to announce that effective June, 2021 we will
-                    launch our “100 Trendy Restaurant Project.”
+                    We are honored to announce that effective June 2021, we will launch our “100 Trendy Restaurants Project”
                   </p>
                 ) : (
                   <p>
@@ -219,10 +218,10 @@ function App() {
 
                 {!isChinese ? (
                   <p>
-                    Making 100 best hot and trendy restaurants is our project
-                    mission. We customize your restaurant branding package. Our
-                    services cover photo, video, menu, poster, website,
-                    advertisement, social media.
+                    Making 100 restaurants the hottest and trendiest in the business is our mission. 
+                    We will customize your restaurant branding package and offer a variety of services
+                    such as photos, videos, menu, poster designs, website development,
+                    advertising and social media marketing.
                   </p>
                 ) : (
                   <p>
@@ -234,10 +233,6 @@ function App() {
                 {!isChinese ? (
                   <div>
                     <p>
-                      We truly believe that you would greatly benefit from this
-                      project.
-                    </p>
-                    <p>
                       We would be pleased to have the opportunity to work with
                       you soon. Please feel free to contact us for more
                       information.
@@ -245,7 +240,7 @@ function App() {
                   </div>
                 ) : (
                   <p>
-                    我们真心的相信这个项目会给您的餐厅带来更高的知名度和更多客源。我们非常期待未来与您的合作。请随时联系我们了解更多项目资讯。
+                    我们非常期待尽快与您合作。请随时联系我们了解更多项目资讯。
                   </p>
                 )}
                 <br></br>
@@ -258,10 +253,10 @@ function App() {
                 <br></br>
 
                 {!isChinese ? (
-                  <p>20% off on your branding package through year 2021-2023</p>
+                  <p>20% off on your branding package through the end of 2022</p>
                 ) : (
                   <p>
-                    在2021年到2023年之间签订合作计划，我们可以提供给您八折优惠。
+                    在2022年底前签订合作计划的商家，我们会为您提供八折优惠。
                   </p>
                 )}
                 <div
