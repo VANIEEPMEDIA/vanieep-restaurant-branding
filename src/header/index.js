@@ -1,25 +1,14 @@
 import React from "react";
 import "./index.scss";
 import { AiOutlineMail, AiOutlinePhone } from "react-icons/ai";
-import Switch from "@material-ui/core/Switch";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
 
-const Header = ({ translationClick, isChinese }) => {
+
+const Header = ({ children }) => {
   return (
     <header className="flex-center app-header">
       <div className="translation">
-        <FormControlLabel
-          control={
-            <Switch
-              checked={isChinese}
-              onChange={translationClick}
-              color="primary"
-              name="translation"
-              inputProps={{ "aria-label": "translation" }}
-            />
-          }
-          label={"中文"}
-        />
+        {children}
+
       </div>
       <div className="header-text">Vanieep Media</div>
       {/* <div className="icon-wrapper">

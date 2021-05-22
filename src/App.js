@@ -16,6 +16,9 @@ import project1cn from "./img/project1cn.png";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import wechatQr from "./img/wechat-qr.jpg";
 import emailQr from "./img/email-qr.jpg";
+import meif101 from "./img/meif101.mp4";
+import MSwitch from "@material-ui/core/Switch";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
 
 const Video = ({ className }) => {
   return (
@@ -156,34 +159,67 @@ const contentCN = [
   },
 ];
 
+const Translation = ({ isChinese, handleChange }) => {
+  return (
+    <FormControlLabel
+      control={
+        <MSwitch
+          checked={isChinese}
+          onChange={handleChange}
+          color="primary"
+          name="translation"
+          inputProps={{ "aria-label": "translation" }}
+        />
+      }
+      label={"中文"}
+    />
+  );
+};
+const HomeRoute = ({ handleChange, _c, isChinese }) => {
+  return (
+    <div className="app">
+      <Header>
+        <Translation handleChange={handleChange} isChinese={isChinese} />
+      </Header>
+      <MainImg isChinese={isChinese} />
+      <Body isChinese={isChinese} />
+      {_c.map((c, i) => (
+        <Section key={i} content={c} />
+      ))}
+      <Social />
+      <Link to="project" className="project1">
+        <img
+          loading="lazy"
+          src={isChinese ? project1cn : project1en}
+          alt="project"
+        ></img>
+      </Link>
+    </div>
+  );
+};
+
 function App() {
   const [isChinese, setState] = React.useState(false);
   const handleChange = () => {
     setState(!isChinese);
   };
   const _c = isChinese ? contentCN : content;
+  let refP;
   return (
     <Router>
       <div>
         <Switch>
           <Route exact path="/">
-            <div className="app">
-              <Header translationClick={handleChange} isChinese={isChinese} />
-              <MainImg isChinese={isChinese} />
-              <Body isChinese={isChinese} />
-              {_c.map((c, i) => (
-                <Section key={i} content={c} />
-              ))}
-              <Social />
-              <Link to="project" className="project1">
-                <img loading="lazy" src={isChinese ? project1cn : project1en} alt="project"></img>
-              </Link>
-            </div>
+            <HomeRoute
+              isChinese={isChinese}
+              handleChange={handleChange}
+              _c={_c}
+            />
           </Route>
           <Route exact path="/project">
             <div className="project-1-root">
               {/* <div className="project-1-root-video"> */}
-              <iframe
+              {/* <iframe
                 src="https://player.vimeo.com/video/548271438?autoplay=1&loop=1&autopause=0&muted=1&sidedock=0&controls=0&title=0&transparent=0"
                 width="100%"
                 // height="360"
@@ -191,95 +227,123 @@ function App() {
                 frameBorder="0"
                 allow="autoplay; fullscreen; picture-in-picture"
                 allowFullscreen
-              ></iframe>
-              {/* </div> */}
-              {/* <img src={projectImg} style={{width: "100%"}}></img> */}
-              <div className="p">
-               
-                <br></br>
-                {!isChinese ? (
-                  <p className="big">To Our Valued Clients:</p>
-                ) : (
-                  <p className="big">致我们最尊贵的客户，</p>
-                )}
+              ></iframe> */}
+              <div className="translation">
 
-                <br></br>
-
-                {!isChinese ? (
-                  <p>
-                    We are honored to announce that effective June 2021, we will launch our “100 Trendy Restaurants Project”
-                  </p>
-                ) : (
-                  <p>
-                    我们很荣幸地宣布自2021年6月起，我们的新项目“百家网红餐厅计划”正式启动。
-                  </p>
-                )}
-                <br></br>
-
-                {!isChinese ? (
-                  <p>
-                    Making 100 restaurants the hottest and trendiest in the business is our mission. 
-                    We will customize your restaurant branding package and offer a variety of services
-                    such as photos, videos, menu, poster designs, website development,
-                    advertising and social media marketing.
-                  </p>
-                ) : (
-                  <p>
-                    参与创造100间最火网红餐厅是我们这个项目的任务。我们会为您的餐厅制定个性化品牌包装项目，服务内容涵盖：图片，视频，菜单，海报，网页，广告投放，社交媒体等。
-                  </p>
-                )}
-                <br></br>
-
-                {!isChinese ? (
-                  <div>
-                    <p>
-                      We would be pleased to have the opportunity to work with
-                      you soon. Please feel free to contact us for more
-                      information.
-                    </p>
-                  </div>
-                ) : (
-                  <p>
-                    我们非常期待尽快与您合作。请随时联系我们了解更多项目资讯。
-                  </p>
-                )}
-                <br></br>
-                <br></br>
-                {!isChinese ? (
-                  <p>Limited Time Offer：</p>
-                ) : (
-                  <p>限时优惠计划:</p>
-                )}
-                <br></br>
-
-                {!isChinese ? (
-                  <p>20% off on your branding package through the end of 2022</p>
-                ) : (
-                  <p>
-                    在2022年底前签订合作计划的商家，我们会为您提供八折优惠。
-                  </p>
-                )}
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    justifyContent: "space-between",
-                    marginTop: "40px",
+                      <Translation handleChange={handleChange} isChinese={isChinese} />
+              </div>
+              <div className="video-meif">
+                <video autoplay="true" loop="true" muted>
+                  <source src={meif101} type="video/mp4"></source>
+                  Your browser does not support the video tag.
+                </video>
+                <button
+                  className="click-to-scroll"
+                  onClick={(e) => {
+                    refP &&
+                      refP.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start",
+                      });
                   }}
                 >
-                  <img
-                    src={wechatQr}
-                    style={{ width: "100px", height: "100px" }}
-                  ></img>
+                  SEE MORE
+                </button>
+              </div>
+
+              {/* </div> */}
+              {/* <img src={projectImg} style={{width: "100%"}}></img> */}
+              <div className="p-content" ref={(r) => (refP = r)}>
+                <div>
+                  <br></br>
+                  {!isChinese ? (
+                    <p className="big">To Our Valued Clients:</p>
+                  ) : (
+                    <p className="big">致我们最尊贵的客户，</p>
+                  )}
+
+                  <br></br>
+
+                  {!isChinese ? (
+                    <p>
+                      We are honored to announce that effective June 2021, we
+                      will launch our “100 Trendy Restaurants Project”
+                    </p>
+                  ) : (
+                    <p>
+                      我们很荣幸地宣布自2021年6月起，我们的新项目“百家网红餐厅计划”正式启动。
+                    </p>
+                  )}
+                  <br></br>
+
+                  {!isChinese ? (
+                    <p>
+                      Making 100 restaurants the hottest and trendiest in the
+                      business is our mission. We will customize your restaurant
+                      branding package and offer a variety of services such as
+                      photos, videos, menu, poster designs, website development,
+                      advertising and social media marketing.
+                    </p>
+                  ) : (
+                    <p>
+                      参与创造100间最火网红餐厅是我们这个项目的任务。我们会为您的餐厅制定个性化品牌包装项目，服务内容涵盖：图片，视频，菜单，海报，网页，广告投放，社交媒体等。
+                    </p>
+                  )}
+                  <br></br>
+
+                  {!isChinese ? (
+                    <div>
+                      <p>
+                        We would be pleased to have the opportunity to work with
+                        you soon. Please feel free to contact us for more
+                        information.
+                      </p>
+                    </div>
+                  ) : (
+                    <p>
+                      我们非常期待尽快与您合作。请随时联系我们了解更多项目资讯。
+                    </p>
+                  )}
+                  <br></br>
+                  <br></br>
+                  {!isChinese ? (
+                    <p>Limited Time Offer：</p>
+                  ) : (
+                    <p>限时优惠计划:</p>
+                  )}
+                  <br></br>
+
+                  {!isChinese ? (
+                    <p>
+                      20% off on your branding package through the end of 2022
+                    </p>
+                  ) : (
+                    <p>
+                      在2022年底前签订合作计划的商家，我们会为您提供八折优惠。
+                    </p>
+                  )}
                   <div
                     style={{
                       display: "flex",
-                      flexDirection: "column",
-                      alignItems: "center",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                      marginTop: "40px",
                     }}
                   >
-                    <img src={emailQr} style={{ width: "100px" }}></img>
-                    <div>email/邮箱</div>
+                    <img
+                      src={wechatQr}
+                      style={{ width: "100px", height: "100px" }}
+                    ></img>
+                    <div
+                      style={{
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
+                      }}
+                    >
+                      <img src={emailQr} style={{ width: "100px" }}></img>
+                      <div>email/邮箱</div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -287,6 +351,13 @@ function App() {
               {/* <div className="square"></div>
               <div className="circle"></div> */}
             </div>
+          </Route>
+          <Route path="*">
+            <HomeRoute
+                isChinese={isChinese}
+                handleChange={handleChange}
+                _c={_c}
+              />
           </Route>
         </Switch>
       </div>
