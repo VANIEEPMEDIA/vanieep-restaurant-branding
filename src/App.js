@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./App.scss";
 import Header from "./header";
 import Body from "./body";
@@ -203,6 +203,7 @@ function App() {
   const handleChange = () => {
     setState(!isChinese);
   };
+
   const _c = isChinese ? contentCN : content;
   let refP;
   return (
@@ -233,7 +234,7 @@ function App() {
                       <Translation handleChange={handleChange} isChinese={isChinese} />
               </div>
               <div className="video-meif">
-                <video autoplay="true" loop="true" muted>
+                <video autoplay="true" loop={true} muted={true} webkitPlaysInline webkit-playsinline playsinline playsInline>
                   <source src={meif101} type="video/mp4"></source>
                   Your browser does not support the video tag.
                 </video>
